@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should assert difference between two UserItems 1`] = `
+"Snapshot Diff:
+- <UserItem name=\\"Jakub\\" username=\\"jayu\\" />
++ <UserItem name=\\"Mathew\\" username=\\"math\\" />
+
+  <p
+    className=\\"userContainer\\"
+  >
+    <span>
+-     Jakub
++     Mathew
+    </span>
+    <span
+      className=\\"userName\\"
+    >
+      @
+-     jayu
++     math
+    </span>
+  </p>"
+`;

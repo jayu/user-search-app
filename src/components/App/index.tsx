@@ -1,19 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './style.css';
+import styles from './styles.module.css';
+
+import UserItem from '../UserItem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
+    <div className={styles.container}>
+      <header>
+        <h1>Users List</h1>
       </header>
+      <main>
+        <UserItem name="Jakub" username="jayu" />
+      </main>
     </div>
   );
 }
