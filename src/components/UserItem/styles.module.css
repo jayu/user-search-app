@@ -1,5 +1,7 @@
 .userContainer {
   font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .userName {

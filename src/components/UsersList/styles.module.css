@@ -1,5 +1,8 @@
 .list {
   list-style: none;
+  padding: 0;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .listItemContainer {
@@ -11,4 +14,10 @@
   width: 25px;
   margin-left: -25px;
   font-size: 0.8rem;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+  display: block;
 }
