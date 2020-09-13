@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 import { User } from '../../types';
 
-type UserData = User[] | null;
+export type UserData = User[] | null;
 
 const useUserData = (): [UserData, boolean] => {
   const [users, setUsers] = useState<UserData>([]);

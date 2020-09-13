@@ -26,6 +26,7 @@ test('Display list of users', async () => {
   );
   const { findByText } = render(<App />);
   expect(await findByText(/John Smith/)).toBeInTheDocument();
+  expect(await findByText(/@jayu/)).toBeInTheDocument();
 });
 
 test('Filter list by input text', async () => {
@@ -77,4 +78,10 @@ test('Show empty list message for non existing search value', async () => {
   });
 
   expect(await findByText(/There are no users/i)).toBeInTheDocument();
+});
+
+test('Display message on fetch error', async () => {
+  fetch.mockReject(new Error('Internal server error'));
+  const { findByText } = render(<App />);
+  expect(await findByText(/Users fetch error/)).toBeInTheDocument();
 });

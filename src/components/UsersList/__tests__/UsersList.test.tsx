@@ -9,34 +9,25 @@ beforeEach(() => {
   fetch.resetMocks();
 });
 
-test('Displays message on fetch error', async () => {
-  fetch.mockReject(new Error('Internal server error'));
-  const { findByText } = render(<UsersList />);
-  expect(await findByText(/Users fetch error/)).toBeInTheDocument();
-});
-
-test('Displays message for empty list', async () => {
-  fetch.mockResponse(JSON.stringify([]));
-  const { findByText } = render(<UsersList />);
+test('Display message for empty list', async () => {
+  const { findByText } = render(<UsersList users={[]} />);
   expect(await findByText(/There are no users :\(/)).toBeInTheDocument();
 });
 
-test('Displays list of users', async () => {
-  fetch.mockResponse(
-    JSON.stringify([
-      {
-        id: 0,
-        name: 'John Smith',
-        username: 'jonny',
-      },
-      {
-        id: 1,
-        name: 'Jay Smith',
-        username: 'jayu',
-      },
-    ]),
-  );
-  const { findByText } = render(<UsersList />);
+test('Display list of users', async () => {
+  const users = [
+    {
+      id: 0,
+      name: 'John Smith',
+      username: 'jonny',
+    },
+    {
+      id: 1,
+      name: 'Jay Smith',
+      username: 'jayu',
+    },
+  ];
+  const { findByText } = render(<UsersList users={users} />);
   expect(await findByText(/@jayu/)).toBeInTheDocument();
   expect(await findByText(/@jonny/)).toBeInTheDocument();
 });

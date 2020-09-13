@@ -5,7 +5,7 @@ import SearchInput from '../index';
 test('Handles input change', async () => {
   const handler = jest.fn();
 
-  const { findByPlaceholderText } = render(<SearchInput onValueChange={handler} />);
+  const { findByPlaceholderText } = render(<SearchInput onValueChange={handler} placeholder="search user" />);
   const input = await findByPlaceholderText(/search user/i);
 
   act(() => {

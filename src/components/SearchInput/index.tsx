@@ -2,11 +2,12 @@ import React, { useState, useCallback } from 'react';
 import styles from './styles.module.css';
 
 type Props = {
-  onValueChange?: (text: string) => void;
+  placeholder?: string;
   className?: string;
+  onValueChange?: (text: string) => void;
 };
 
-const SearchInput = ({ onValueChange, className = '' }: Props) => {
+const SearchInput = ({ onValueChange, className = '', placeholder }: Props) => {
   const [value, setValue] = useState('');
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +24,7 @@ const SearchInput = ({ onValueChange, className = '' }: Props) => {
       className={`${styles.input} ${className}`}
       value={value}
       onChange={handleInputChange}
-      placeholder="Search user by name..."
+      placeholder={placeholder}
     ></input>
   );
 };
