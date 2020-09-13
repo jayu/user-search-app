@@ -17,7 +17,7 @@ const SearchInput = ({ onValueChange, className = '', placeholder }: Props) => {
         onValueChange(value);
       }
     },
-    [setValue],
+    [setValue, onValueChange],
   );
   return (
     <input
