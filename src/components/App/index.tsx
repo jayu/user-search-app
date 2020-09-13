@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './styles.module.css';
 
-import UserItem from '../UserItem';
+import styles from './styles.module.css';
+import UsersList from '../UsersList';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <h1>Users List</h1>
       </header>
       <main>
-        <UserItem name="Jakub" username="jayu" />
+        <UsersList />
       </main>
     </div>
   );

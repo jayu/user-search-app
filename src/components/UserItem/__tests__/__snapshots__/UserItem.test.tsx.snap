@@ -5,19 +5,21 @@ exports[`It should assert difference between two UserItems 1`] = `
 - <UserItem name=\\"Jakub\\" username=\\"jayu\\" />
 + <UserItem name=\\"Mathew\\" username=\\"math\\" />
 
-  <p
+@@ -2,14 +2,14 @@
     className=\\"userContainer\\"
   >
-    <span>
+    <span
+      className=\\"primary \\"
+    >
 -     Jakub
 +     Mathew
     </span>
     <span
-      className=\\"userName\\"
+      className=\\"secondary userName\\"
     >
       @
 -     jayu
 +     math
     </span>
-  </p>"
+  </span>"
 `;

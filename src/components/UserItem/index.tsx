@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+import Text from '../Text';
+
 type Props = {
   name: string;
   username: string;
@@ -8,10 +10,12 @@ type Props = {
 
 const UserItem = ({ name, username }: Props) => {
   return (
-    <p className={styles.userContainer}>
-      <span>{name}</span>
-      <span className={styles.userName}>@{username}</span>
-    </p>
+    <span className={styles.userContainer}>
+      <Text>{name}</Text>
+      <Text color="secondary" className={styles.userName}>
+        @{username}
+      </Text>
+    </span>
   );
 };
 
